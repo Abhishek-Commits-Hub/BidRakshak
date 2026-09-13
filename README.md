@@ -1,52 +1,44 @@
-@"
 # BidRakshak
 
-AI-Powered Integrated Bid Compliance Verification Platform for GeM Procurement.
+BidRakshak is a procurement compliance prototype designed to help officers review tender requirements, map evidence, assess risk, and generate an audit-ready report.
 
-Problem Statement: SIH26100
+## Features
+- Tender overview and bidder information
+- Requirement-by-requirement compliance tracking
+- Evidence and verification review
+- Risk scoring and review queue
+- Audit-ready report generation
+- Demo authentication and seeded procurement data
 
-## Core Workflow
+## Stack
+- Backend: FastAPI + SQLAlchemy + SQLite
+- Frontend: React + TypeScript + Vite
 
-Upload → Extract → Match → Verify → Guide → Report
-
-## Technology Stack
-
-### Frontend
-- React
-- TypeScript
-- Vite
-- Tailwind CSS
-- Recharts
+## Quick start
 
 ### Backend
-- Python
-- FastAPI
-- REST APIs
-- JWT Authentication
+```powershell
+cd backend
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+uvicorn app.main:app --host 0.0.0.0 --port 8000
+```
 
-### Data
-- PostgreSQL
-- Supabase
-- Redis-compatible job processing
+### Frontend
+```powershell
+cd frontend
+npm install
+npm run dev -- --host 0.0.0.0 --port 5173
+```
 
-### AI
-- LLM
-- Embeddings
-- OCR
-- Deterministic Rules Engine
+## Demo login
+- Email: demo@bidrakshak.gov.in
+- Password: BidRakshak@123
 
-## Product Principles
+## Demo URL
+- Frontend: http://localhost:5173
+- Backend: http://localhost:8000/docs
 
-- AI-assisted, not AI-controlled
-- Deterministic threshold verification
-- Evidence-backed decisions
-- Human-in-the-loop review
-- Page-level document traceability
-- Append-only audit trail
-- Multi-tenant architecture
-- Production-ready architecture
-
-## Development Status
-
-Phase 1 — Project Foundation
-"@ | Set-Content README.md
+## Notes
+This is a prototype built for demonstration and evaluation. It uses deterministic seeded data to simulate a realistic procurement compliance workflow.

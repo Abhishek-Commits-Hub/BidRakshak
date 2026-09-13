@@ -1,45 +1,29 @@
-@"
-# Environment
+# Environment / secrets
 .env
 .env.*
-!.env.example
 
 # Python
 __pycache__/
 *.py[cod]
 *.pyo
-.venv/
-venv/
+*.pyd
 .pytest_cache/
 .mypy_cache/
-.ruff_cache/
+.venv/
+venv/
 
 # Node
 node_modules/
 dist/
-.vite/
+build/
+.npm/
 
-# IDE
-.vscode/
-.idea/
+# Databases / uploads
+*.db
+*.sqlite3
+uploads/
 
-# OS
+# OS/editor
 .DS_Store
 Thumbs.db
-
-# Logs
-*.log
-
-# Uploaded/generated files
-uploads/
-generated/
-reports/
-
-# Test artifacts
-coverage/
-htmlcov/
-
-# Secrets
-*.pem
-*.key
-"@ | Set-Content .gitignore
+.vscode/
