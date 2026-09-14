@@ -11,16 +11,15 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { demoUser } from "../../lib/demoData";
 import type { LoginResponse } from "../../types/auth";
 
+const DEMO_EMAIL = "demo@bidrakshak.gov.in";
+const DEMO_PASSWORD = "BidRakshak@123";
+
 export default function Login() {
     const navigate = useNavigate();
     const location = useLocation();
 
-    const [email, setEmail] = useState(
-        "demo@bidrakshak.gov.in"
-    );
-    const [password, setPassword] = useState(
-        "BidRakshak@123"
-    );
+    const [email, setEmail] = useState(DEMO_EMAIL);
+    const [password, setPassword] = useState(DEMO_PASSWORD);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
 
@@ -154,6 +153,7 @@ export default function Login() {
                                             event.target.value
                                         )
                                     }
+                                    autoComplete="email"
                                     className="w-full rounded-xl border border-slate-800 bg-[#0b1728] py-3 pl-10 pr-4 text-sm text-white outline-none transition placeholder:text-slate-600 focus:border-blue-500/60 focus:ring-2 focus:ring-blue-500/10"
                                     placeholder="officer@example.gov.in"
                                     required
@@ -178,6 +178,7 @@ export default function Login() {
                                             event.target.value
                                         )
                                     }
+                                    autoComplete="current-password"
                                     className="w-full rounded-xl border border-slate-800 bg-[#0b1728] py-3 pl-10 pr-4 text-sm text-white outline-none transition focus:border-blue-500/60 focus:ring-2 focus:ring-blue-500/10"
                                     required
                                 />
@@ -196,8 +197,8 @@ export default function Login() {
                             className="flex w-full items-center justify-center gap-2 rounded-xl bg-blue-600 px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-950/30 transition hover:bg-blue-500 disabled:cursor-not-allowed disabled:opacity-60"
                         >
                             {loading
-                                ? "Signing in..."
-                                : "Sign in"}
+                                ? "Opening workspace..."
+                                : "Enter demo workspace"}
                             {!loading && (
                                 <ArrowRight size={17} />
                             )}
@@ -209,10 +210,13 @@ export default function Login() {
                             SIH Demo Account
                         </p>
                         <p className="mt-2 text-xs text-slate-400">
-                            demo@bidrakshak.gov.in
+                            Email: {DEMO_EMAIL}
                         </p>
-                        <p className="mt-1 text-xs text-slate-500">
-                            Demo account credentials are prefilled.
+                        <p className="mt-1 text-xs text-slate-400">
+                            Password: {DEMO_PASSWORD}
+                        </p>
+                        <p className="mt-2 text-[11px] leading-5 text-slate-500">
+                            Credentials are already filled in. Select “Enter demo workspace” to continue.
                         </p>
                     </div>
                 </div>
