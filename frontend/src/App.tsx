@@ -1,6 +1,5 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 
-import ProtectedRoute from "./components/ProtectedRoute";
 import AppLayout from "./components/layout/AppLayout";
 import Login from "./pages/auth/Login";
 import Dashboard from "./pages/dashboard/Dashboard";
@@ -23,63 +22,61 @@ export default function App() {
                 element={<Login />}
             />
 
-            <Route element={<ProtectedRoute />}>
-                <Route element={<AppLayout />}>
-                    <Route
-                        path="/dashboard"
-                        element={<Dashboard />}
-                    />
+            <Route element={<AppLayout />}>
+                <Route
+                    path="/dashboard"
+                    element={<Dashboard />}
+                />
 
-                    <Route
-                        path="/tenders/:tenderId"
-                        element={<TenderOverview />}
-                    />
+                <Route
+                    path="/tenders/:tenderId"
+                    element={<TenderOverview />}
+                />
 
-                    <Route
-                        path="/tenders/:tenderId/analysis"
-                        element={<Analysis />}
-                    />
+                <Route
+                    path="/tenders/:tenderId/analysis"
+                    element={<Analysis />}
+                />
 
-                    <Route
-                        path="/tenders/:tenderId/requirements"
-                        element={<Requirements />}
-                    />
+                <Route
+                    path="/tenders/:tenderId/requirements"
+                    element={<Requirements />}
+                />
 
-                    <Route
-                        path="/tenders/:tenderId/requirements/:requirementId"
-                        element={<RequirementDetail />}
-                    />
+                <Route
+                    path="/tenders/:tenderId/requirements/:requirementId"
+                    element={<RequirementDetail />}
+                />
 
-                    <Route
-                        path="/tenders/:tenderId/evidence"
-                        element={<EvidencePage />}
-                    />
+                <Route
+                    path="/tenders/:tenderId/evidence"
+                    element={<EvidencePage />}
+                />
 
-                    <Route
-                        path="/tenders/:tenderId/upload"
-                        element={<UploadDocument />}
-                    />
+                <Route
+                    path="/tenders/:tenderId/upload"
+                    element={<UploadDocument />}
+                />
 
-                    <Route
-                        path="/tenders/:tenderId/verification"
-                        element={<Verification />}
-                    />
+                <Route
+                    path="/tenders/:tenderId/verification"
+                    element={<Verification />}
+                />
 
-                    <Route
-                        path="/tenders/:tenderId/risk"
-                        element={<RiskPage />}
-                    />
+                <Route
+                    path="/tenders/:tenderId/risk"
+                    element={<RiskPage />}
+                />
 
-                    <Route
-                        path="/review"
-                        element={<Review />}
-                    />
+                <Route
+                    path="/review"
+                    element={<Review />}
+                />
 
-                    <Route
-                        path="/report"
-                        element={<ReportPage />}
-                    />
-                </Route>
+                <Route
+                    path="/report"
+                    element={<ReportPage />}
+                />
             </Route>
 
             <Route

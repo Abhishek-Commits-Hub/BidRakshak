@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-import api from "../../lib/api";
+import { demoUser } from "../../lib/demoData";
 import type { LoginResponse } from "../../types/auth";
 
 export default function Login() {
@@ -32,22 +32,20 @@ export default function Login() {
         setError("");
 
         try {
-            const response = await api.post<LoginResponse>(
-                "/auth/login",
-                {
-                    email,
-                    password
-                }
-            );
+            const response: LoginResponse = {
+                access_token: "demo-token",
+                token_type: "bearer",
+                user: { ...demoUser, email },
+            };
 
             localStorage.setItem(
                 "bidrakshak_token",
-                response.data.access_token
+                response.access_token
             );
 
             localStorage.setItem(
                 "bidrakshak_user",
-                JSON.stringify(response.data.user)
+                JSON.stringify(response.user)
             );
 
             const from =

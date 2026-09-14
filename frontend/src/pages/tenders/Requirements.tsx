@@ -25,7 +25,6 @@ export default function Requirements() {
 
     useEffect(() => {
         if (!tenderId) return;
-        setLoading(true);
 
         const params: Record<string, string> = {};
         if (category !== "All") params.category = category;
