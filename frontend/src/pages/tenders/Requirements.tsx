@@ -152,7 +152,7 @@ export default function Requirements() {
                                             </span>
                                         </td>
                                         <td className="px-4 py-3 text-right text-xs text-slate-400">
-                                            {req.confidence > 0 ? `${req.confidence}%` : "—"}
+                                            {req.confidence > 0 ? `${Math.round(req.confidence * 100)}%` : "—"}
                                         </td>
                                     </tr>
                                 );

@@ -70,7 +70,7 @@ export default function Verification() {
                                 <VerifBox label="Observed Value" value={vr.observed_value || "—"} />
                                 <VerifBox label="Required Value" value={vr.expected_value || "—"} />
                                 <VerifBox label="Calculation" value={vr.calculation || "—"} mono />
-                                <VerifBox label="Confidence" value={vr.confidence > 0 ? `${vr.confidence}%` : "—"} />
+                                <VerifBox label="Confidence" value={vr.confidence > 0 ? `${Math.round(vr.confidence * 100)}%` : "—"} />
                             </div>
 
                             {vr.rule && (

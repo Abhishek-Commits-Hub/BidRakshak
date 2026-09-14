@@ -105,7 +105,7 @@ export default function RequirementDetail() {
                             {req.compliance_status.replace("_", " ")}
                         </span>
                         {req.confidence > 0 && (
-                            <span className="text-xs text-slate-500">Confidence: {req.confidence}%</span>
+                            <span className="text-xs text-slate-500">Confidence: {Math.round(req.confidence * 100)}%</span>
                         )}
                     </div>
                 </div>
@@ -160,7 +160,7 @@ export default function RequirementDetail() {
                                         Evidence: {evidence.evidence_status.replace("_", " ")}
                                     </span>
                                     <span className="text-xs text-slate-500">
-                                        Confidence: {evidence.confidence}%
+                                        Confidence: {Math.round(evidence.confidence * 100)}%
                                     </span>
                                 </div>
                             </div>

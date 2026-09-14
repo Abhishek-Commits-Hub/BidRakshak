@@ -68,7 +68,7 @@ export default function EvidencePage() {
                                     }`}>
                                         {ev.evidence_status.replace("_", " ")}
                                     </span>
-                                    <span className="text-xs text-slate-500">{ev.confidence}%</span>
+                                    <span className="text-xs text-slate-500">{Math.round(ev.confidence * 100)}%</span>
                                 </div>
                             </div>
                             {ev.source_text && (
@@ -124,7 +124,7 @@ export default function EvidencePage() {
                                 </div>
                                 <div className="rounded-lg border border-slate-800 bg-slate-900/50 p-3">
                                     <p className="text-[10px] font-semibold uppercase tracking-wide text-slate-500">Confidence</p>
-                                    <p className="mt-1 text-sm font-medium text-white">{selected.confidence}%</p>
+                                    <p className="mt-1 text-sm font-medium text-white">{Math.round(selected.confidence * 100)}%</p>
                                 </div>
                             </div>
 
