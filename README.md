@@ -16,7 +16,7 @@ We built BIDRAKSHAK around a simple idea:
 
 ## 🚀 Prototype
 
-**Live Prototype:** YOUR_LIVE_PROTOTYPE_LINK
+**Live Prototype:** [Click Here](https://abhishek-commits-hub.github.io/BidRakshak/)
 
 **GitHub Repository:** YOUR_GITHUB_REPOSITORY_LINK
 
