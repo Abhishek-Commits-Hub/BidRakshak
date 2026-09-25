@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-labelledby="title">
+  <title id="title">BIDRAKSHAK shield and verified document mark</title>
+  <defs>
+    <linearGradient id="shield" x1="10" y1="5" x2="38" y2="43" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2874d2"/>
+      <stop offset="0.58" stop-color="#155f91"/>
+      <stop offset="1" stop-color="#0e7367"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="17" y1="13" x2="32" y2="35" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#eaf3fc"/>
+    </linearGradient>
+  </defs>
+  <path d="M24 2.7 41.2 9v11.7c0 10.5-6.2 19.4-17.2 24.6C13 40.1 6.8 31.2 6.8 20.7V9L24 2.7Z" fill="url(#shield)"/>
+  <path d="M24 6.4 37.3 11.3v9.3c0 8.4-5 15.9-13.3 20.2-8.3-4.3-13.3-11.8-13.3-20.2v-9.3L24 6.4Z" fill="none" stroke="#d9edff" stroke-opacity="0.76" stroke-width="1.15"/>
+  <path d="M16.2 12.4h10.1l5.5 5.5v17.7H16.2V12.4Z" fill="url(#paper)"/>
+  <path d="M26.3 12.8v5.5h5.2" fill="none" stroke="#2a7890" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.45"/>
+  <path d="M19.3 22.2h9.1M19.3 25.3h5.8" fill="none" stroke="#9bb3c9" stroke-linecap="round" stroke-width="1.55"/>
+  <path d="m19.4 30 2.4 2.4 5.2-5.4" fill="none" stroke="#087c70" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.15"/>
+</svg>
